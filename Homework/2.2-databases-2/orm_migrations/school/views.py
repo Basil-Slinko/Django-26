@@ -8,7 +8,7 @@ def students_list(request):
     template = 'school/students_list.html'
     # ordering = 'name', 'subject'
     context = {
-        Student.teachers: Teacher.objects.prefetch_related('teachers').order_by('name', 'subject').all()
+        'teacher': Teacher.objects.prefetch_related('teachers').order_by('name', 'subject').all()
     }
 
     # используйте этот параметр для упорядочивания результатов
