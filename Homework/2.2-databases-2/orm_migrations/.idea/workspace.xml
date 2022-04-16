@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6857efcb-bae3-489c-ad56-6946767a8e23" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/orm_migrations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/orm_migrations.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school/migrations/0002_remove_student_teacher_student_teachers_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/migrations/0002_remove_student_teacher_student_teachers_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/school/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/school/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/school/students_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/school/students_list.html" afterDir="false" />
     </list>
