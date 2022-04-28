@@ -1,27 +1,25 @@
-from django.views.generic import ListView
 from django.shortcuts import render
 
 from articles.models import Article
 
 
+# def articles_list(request):
+#     context = {
+#         'object_list': Article.objects.order_by('-published_at').all()
+#     }
+#     return render(request, 'articles/news.html', context)
 def articles_list(request):
-    context = {
-        'object_list': Article.objects.order_by('-published_at').all()
-    }
-    return render(request, 'articles/news.html', context)
+    template = 'articles/news.html'
+    articles = Article.objects.all().prefetch_related('scopes').order_by('-published_at')
 
+    for article in articles:
+        for scope in article.scopes.all():
+            article_set = scope.tag.get(article=article)
+            scope.is_main = article_set.is_main
 
+    context = {'object_list': articles}
 
+    ordering = '-published_at'
 
+    return render(request, template, context)
 
-
-
-
-
-
-
-
- # используйте этот параметр для упорядочивания результатов
-    # https://docs.djangoproject.com/en/2.2/ref/models/querysets/#django.db.models.query.QuerySet.order_by
-    # ordering = '-published_at'
-    # .order_by('title', 'text', 'published_at', 'image')
