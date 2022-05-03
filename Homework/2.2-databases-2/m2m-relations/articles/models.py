@@ -32,7 +32,7 @@ class Article(models.Model):
 
 class TagArticles(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='tag_articles')
-    tag = models.ForeignKey(Tag, on_delete=models.CASCADE, verbose_name='Раздел', related_name='tag_articles')
+    tag = models.ForeignKey(Tag, on_delete=models.CASCADE, verbose_name='Раздел', related_name='tag')
     is_main = models.BooleanField(verbose_name='Основной', blank=True, default=False)
 
     class Meta:

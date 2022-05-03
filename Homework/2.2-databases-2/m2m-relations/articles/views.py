@@ -6,13 +6,13 @@ from articles.models import Article
 
 
 def articles_list(request):
-    pprint(Article.objects.scopes.all())
+    # pprint(Article.objects.scopes.all())
     articles = Article.objects.all().prefetch_related('scopes').order_by('-published_at')
-
-    for article in articles:
-        for scope in article.scopes.all():
-            articleset = scope.get(article=article)
-            scope.is_main = articleset.is_main
+    pprint(articles)
+    # for article in articles:
+    #     for scope in article.scopes.all():
+    #         articleset = scope.get(article=article)
+    #         scope.is_main = articleset.is_main
 
 
     context = {
