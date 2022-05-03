@@ -22,6 +22,7 @@ class ArticleScopeInline(admin.TabularInline):
     model = TagArticles
     formset = RelationshipInlineFormset
     extra = 0
+    list_display = ['name', ]
 
 
 @admin.register(Article)
@@ -29,3 +30,5 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display = ['title', 'published_at', 'image', ]
     search_fields = ['text']
     inlines = [ArticleScopeInline]
+
+
