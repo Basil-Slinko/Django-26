@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.core.exceptions import ValidationError
 from django.forms import BaseInlineFormSet
 
-from .models import Article, TagArticles
+from .models import Article, TagArticles, Tag
 
 
 class RelationshipInlineFormset(BaseInlineFormSet):
@@ -30,5 +30,15 @@ class ArticleAdmin(admin.ModelAdmin):
     list_display = ['title', 'published_at', 'image', ]
     search_fields = ['text']
     inlines = [ArticleScopeInline]
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ['name', ]
+    search_fields = ['name']
+
+
+
+
 
 
