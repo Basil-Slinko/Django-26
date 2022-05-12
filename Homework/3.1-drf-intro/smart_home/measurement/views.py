@@ -1,5 +1,3 @@
-# TODO: опишите необходимые обработчики, рекомендуется использовать generics APIView классы:
-# TODO: ListCreateAPIView, RetrieveUpdateAPIView, CreateAPIView
 from rest_framework import status
 from rest_framework.generics import RetrieveUpdateAPIView, ListAPIView, CreateAPIView, RetrieveAPIView
 from rest_framework.response import Response
